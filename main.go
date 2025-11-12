@@ -71,7 +71,7 @@ func main() {
 	http.HandleFunc("/retrieve/", retrieveCredential)
 	http.HandleFunc("/health", healthCheck)
 
-	log.Println("🚀 Server started at :8080")
+	log.Println("🚀 Server Running at PORT : 8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
@@ -193,4 +193,5 @@ func healthCheck(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]string{
 		"status": "healthy",
 	})	
+
 }
